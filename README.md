@@ -35,7 +35,8 @@ AI 会自动拉取安装。
 
 ```
 FOF99-SKILLS/
-├── README.md                  ← 你正在看的这个文件
-└── Fund-Analysis/
-    └── SKILL.md           ← 技能的指令文件
+├── README.md
+└── skills/
+    └── Fund-Analysis/
+        └── SKILL.md
 ```
