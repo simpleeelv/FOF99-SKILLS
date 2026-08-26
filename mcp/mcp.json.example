@@ -10,3 +10,20 @@
     }
   }
 }
+
+or
+
+{
+  "mcpServers": {
+    "fof99_mcp_mall": {
+      "url": "https://mcp.huofuniu.com/mcp/mall/sse",
+      "type": "sse",
+      "headers": {
+        "APP-ID": "YOUR_APP_ID",
+        "APP-SECRET": "YOUR_APP_SECRET"
+      }
+    }
+  }
+}
+
+---
