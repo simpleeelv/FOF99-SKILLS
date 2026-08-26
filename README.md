@@ -36,7 +36,10 @@ AI 会自动拉取安装。
 ```
 FOF99-SKILLS/
 ├── README.md
-└── skills/
-    └── Fund-Analysis/
-        └── SKILL.md
+├── skills/
+│   └── Fund-Analysis/
+│       └── SKILL.md
+└── mcp/
+    ├── README.md              ← MCP 安装说明
+    └── mcp.json.example       ← 配置模板
 ```
