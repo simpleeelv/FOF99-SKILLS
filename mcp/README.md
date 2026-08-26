@@ -1,43 +1,13 @@
 # 火富牛 MCP 配置
 这个文件夹包含火富牛（fof99）MCP Server 的配置模板。
 配合本仓库的 `Fund-Analysis` Skill 使用，安装后 AI 就能调用火富牛的基金数据接口。
+
 ---
 
 ## 前置条件
 1. 你需要有好投科技火富牛平台的账号，并获得 `APP-ID` 和 `APP-SECRET`
 2. 安装支持 MCP 的 AI 工具
 
-## 怎么配置
-
-### 方式一：Streamable HTTP
-JSON
-{
-  "mcpServers": {
-    "fof99_mcp_mall_stream": {
-      "url": "https://mcp.huofuniu.com/mcp/mall/http/stream",
-      "type": "streamableHttp",
-      "headers": {
-        "APP-ID": "YOUR_APP_ID",
-        "APP-SECRET": "YOUR_APP_SECRET"
-      }
-    }
-  }
-}
-
-### 方式二：SSE协议
-JSON
-{
-  "mcpServers": {
-    "fof99_mcp_mall": {
-      "url": "https://mcp.huofuniu.com/mcp/mall/sse",
-      "type": "sse",
-      "headers": {
-        "APP-ID": "YOUR_APP_ID",
-        "APP-SECRET": "YOUR_APP_SECRET"
-      }
-    }
-  }
-}
 ---
 
 ## 配置后能做什么
