@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fof99_mcp_mall_stream": {
+      "url": "https://mcp.huofuniu.com/mcp/mall/http/stream",
+      "type": "streamableHttp",
+      "headers": {
+        "APP-ID": "YOUR_APP_ID",
+        "APP-SECRET": "YOUR_APP_SECRET"
+      }
+    }
+  }
+}
