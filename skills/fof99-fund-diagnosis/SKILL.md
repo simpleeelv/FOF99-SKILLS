@@ -1,13 +1,23 @@
 ---
 name: fof99-fund-diagnosis
-description: Diagnose one public fund, private fund, FOF, portfolio fund, or underlying fund using validated NAV, performance, drawdown, benchmark, style, holdings, manager, and risk data from user-provided files, connected data sources, official disclosures, or other traceable evidence. Use when users ask for 单只基金深度诊断、全面诊断、基金体检、净值拆解、收益来源、回撤分析、持有复盘、FOF穿透诊断、产品是否值得继续关注, or a professional single-fund diagnosis report. Emphasize drawdown tolerance and recovery before return, compare only compatible periods and strategies, inspect FOF look-through exposures and layered fees, identify missing or unreliable evidence, and provide a conditional research conclusion rather than unsupported investment advice. Work independently without requiring a specific platform, MCP, database, or companion skill.
+description: Diagnose one public fund, private fund, FOF, portfolio fund, or underlying fund using validated NAV, performance, drawdown, benchmark, style, holdings, manager, and risk evidence. Use for 单只基金深度诊断、基金体检、净值拆解、收益来源、回撤分析、持有复盘、FOF穿透诊断 or a professional fund diagnosis report. When authorized FOF99 MCP tools are available, use them to resolve funds and enrich or cross-check structured data; otherwise work independently from user files, other connected sources, and traceable disclosures. Emphasize drawdown recovery, comparable periods, FOF look-through risks, evidence limits, and conditional research conclusions rather than unsupported investment advice.
 ---
 
 # 火富牛基金深度诊断
 
 对一只公募、私募、FOF、基金组合或底层基金进行全周期诊断。先确认数据是否可信，再分析“赚什么钱、承担什么风险、回撤后能否修复、在组合中适合扮演什么角色”。将结论表述为研究判断，不代替投资决策。
 
-“火富牛”用于品牌识别和搜索，不构成数据源依赖。无论用户是否使用火富牛，都按相同流程处理其提供的文件、任意已连接数据源和可追溯公开信息。
+“火富牛”既用于品牌识别，也代表可选的数据增强能力。检测到已授权的火富牛 MCP 时优先用于结构化查询和交叉核验；未连接、未授权、无匹配或返回空数据时，自动使用用户材料、其他已连接数据源和可追溯公开信息继续诊断。
+
+## 数据路由
+
+先遵守用户对数据来源的明确限制，再选择运行模式：
+
+- **火富牛增强模式**：存在 `fof99_mcp_mall_stream` 或兼容的 `fof99_mcp_mall` 查询工具，且用户未禁止使用时，主动查询基金身份、净值、指标、基准、管理人和可得穿透数据。
+- **混合核验模式**：用户已提供净值、报告或持仓，同时可使用火富牛 MCP 时，以用户材料对应的事实为分析对象，用 MCP 补充或交叉核验；冲突项并列展示，不静默覆盖。
+- **通用模式**：火富牛 MCP 不可用或无数据时，使用用户文件、其他已连接数据源、官方披露和可追溯信息完成可支持的部分。
+
+进入增强或混合模式时，必须读取并执行 [火富牛 MCP 路由](references/fof99-mcp-routing.md)。只调用查询工具；不得调用上传、写入或交易执行工具。报告中注明实际运行模式、每项关键数据的来源与截止日，不得把未使用火富牛 MCP 的结果标成“火富牛数据”。
 
 ## 核心原则
 
@@ -32,12 +42,13 @@ description: Diagnose one public fund, private fund, FOF, portfolio fund, or und
 
 ### 2. 获取并验证数据
 
-按以下优先级选择数据源，不要求任何特定平台或接口：
+按用途选择证据，而不是机械认定单一来源永远优先：
 
-1. 用户提供的净值表、月报、季报、尽调材料、持仓表或产品说明。
-2. 当前已连接且用户有权访问的基金数据库、托管数据、投研系统或数据 API。
-3. 基金管理人、交易所、监管机构及其他官方公开披露。
-4. 可追溯的第三方数据作为补充，并标注来源、日期和未经官方确认的限制。
+1. 用户提供的净值表、月报、季报、尽调材料、持仓表或产品说明用于还原其实际分析对象。
+2. 火富牛 MCP 在可用时提供结构化基金、净值、指标、管理人及私募 FOF 穿透数据，并用于交叉核验。
+3. 其他已连接且用户有权访问的托管、投研、基金数据库或数据 API 作为补充。
+4. 基金管理人、交易所和监管机构披露用于核验合同口径、正式披露与重大事实。
+5. 可追溯第三方信息仅作补充，并标注来源、日期和未经官方确认的限制。
 
 接受 CSV、XLSX、PDF、DOCX、网页、图片或结构化文本。根据文件类型调用当前环境中合适的读取工具；没有自动读取能力时，说明所需字段并请求用户提供可解析数据。
 
@@ -106,6 +117,7 @@ description: Diagnose one public fund, private fund, FOF, portfolio fund, or und
 ## 输出要求
 
 - 使用 [专业诊断报告模板](references/report-template.md)，先给结论摘要，再给证据与明细。
+- 在产品与数据档案中标明运行模式、火富牛 MCP 是否使用、数据覆盖范围及未命中项。
 - 关键指标保留合理精度，百分比通常保留两位小数；注明数据区间和截止日。
 - 有图表能力时，优先生成净值与基准、回撤曲线、滚动收益和 FOF 穿透配置图；每张图必须附数据来源和一句核心解读。
 - 图表使用白底、清晰图例、适度网格和一致色板。主基金使用高对比主色，基准使用灰色虚线；颜色之外同时使用标签或线型区分，保证可访问性。
@@ -115,6 +127,7 @@ description: Diagnose one public fund, private fund, FOF, portfolio fund, or und
 ## 边界与失败处理
 
 - 数据源不可访问、返回空值或格式错误时，说明缺失项、已尝试路径和可替代材料，不虚构结果。
+- 火富牛 MCP 调用失败时只对该数据项降级，不中止整个诊断；不得要求非火富牛用户必须安装或登录才能继续。
 - 管理人或产品材料属于宣传内容时，将其作为待验证主张，而不是事实来源。
 - 结论不得承诺收益、保证本金、替代适当性评估或构成个性化投资建议。
 - 需要实时市场、法规或管理人事件时，核验最新可信来源并注明检索日期。

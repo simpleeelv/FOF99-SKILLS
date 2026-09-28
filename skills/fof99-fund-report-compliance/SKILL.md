@@ -1,13 +1,23 @@
 ---
 name: fof99-fund-report-compliance
-description: Pre-review Chinese fund and FOF reports for compliance and disclosure risks, then produce professional findings and revision suggestions. Use when reviewing investment reports, due-diligence reports, performance reports, attribution reports, client reports, roadshow materials, fundraising materials, sales talking points, or public content involving funds or fund-of-funds. Check return promises, exaggerated or absolute claims, selective performance presentation, unsupported data, misleading benchmarks or rankings, missing sources and dates, inadequate risk disclosure, investor-suitability language, and FOF-specific issues such as look-through exposure, layered fees, liquidity mismatch, concentration, valuation lag, and underlying-fund performance attribution. Trigger on requests such as 基金报告合规预审、报告合规检查、FOF报告审查、基金材料风险检查、业绩报告审查 or 合规化改写.
+description: Pre-review Chinese fund and FOF reports for compliance, data, disclosure, and presentation risks, then produce traceable findings and revision suggestions. Use for 基金报告合规预审、报告合规检查、FOF报告审查、业绩报告审查、基金材料风险检查 or 合规化改写 across investment, due-diligence, attribution, client, roadshow, fundraising, sales, and public materials. Check promises, absolute claims, selective performance, unsupported figures, misleading benchmarks or rankings, missing sources, suitability language, risk disclosure, and FOF-specific look-through issues. When authorized FOF99 MCP tools are available, use them only to cross-check fund facts and data claims; otherwise complete the review from user materials and traceable official sources.
 ---
 
 # 火富牛基金报告合规预审
 
 将基金及 FOF 报告视为“表述、数据、口径、披露”四类风险的组合。完成发布前预审，给出可追溯的问题定位、风险分级、核验清单和修改建议，不代替合规、法务或监管机构的最终判断。
 
-“火富牛”用于品牌识别和搜索，不构成平台依赖。无论用户是否使用火富牛，都使用其提供的材料、任意已连接数据源和可追溯官方来源完成预审。
+“火富牛”既用于品牌识别，也代表可选的数据核验能力。检测到已授权的火富牛 MCP 时，可核验基金身份、净值、指标、管理人和可得穿透数据；未连接、未授权、无匹配或返回空数据时，仍基于用户材料和可追溯官方来源完成预审。
+
+## 数据路由
+
+报告原文和用户提供的底稿始终是本次预审对象。先遵守用户对数据来源的明确限制，再选择：
+
+- **火富牛增强模式**：用户未提供完整底稿且 MCP 可用时，用查询数据补充事实核验。
+- **混合核验模式**：用户材料与 MCP 同时存在时，逐项对照基金代码、日期、净值口径、收益、回撤、规模、基准、管理人和私募 FOF 穿透信息。
+- **通用模式**：MCP 不可用或无数据时，继续进行表述、披露、口径、一致性和 FOF 专项预审，将无法核验的数据标为待核验。
+
+使用火富牛 MCP 时必须读取 [火富牛 MCP 路由](references/fof99-mcp-routing.md)。只调用查询工具；不得调用上传、写入或交易执行工具。火富牛 MCP 不是法规数据库或法律意见来源，监管判断仍应核验最新官方文件。
 
 ## 工作原则
 
@@ -56,7 +66,16 @@ description: Pre-review Chinese fund and FOF reports for compliance and disclosu
 8. **背书与利益冲突**：检查监管、政府、托管人、代销机构、评级机构或合作方是否被描述成对产品安全、收益或管理能力的保证。
 9. **前后一致性**：核对正文、摘要、图表、脚注、附件和免责声明中的产品名称、日期、数值、币种、单位及结论是否一致。
 
-### 4. 分级并安排处理顺序
+### 4. 核验关键数据主张
+
+对影响结论的净值、收益、回撤、规模、基准、排名、管理人和 FOF 穿透主张建立核验表：报告原值、报告来源、外部核验值、核验来源、截止日、差异及处理意见。
+
+- 火富牛 MCP 可用时，按路由文件查询并交叉核验；没有数据不等于报告数值错误。
+- 用户底稿与 MCP 不一致时，不自动替换原值；先检查份额、币种、费前费后、复权、净值来源、频率、区间和披露滞后。
+- MCP 返回的系统默认指数不一定等于基金合同中的复合业绩比较基准，必须核对正式披露。
+- 法规、适当性、募集传播和法律定性只使用适用的最新官方依据或交由合规人员确认。
+
+### 5. 分级并安排处理顺序
 
 - **高风险**：可能误导投资者、构成收益或安全承诺、使用重大无依据结论，或存在影响发布的关键缺失。建议暂停发布并优先人工复核。
 - **中风险**：依据、口径或披露不足，可能改变读者理解。补充材料或修改后再发布。
@@ -65,7 +84,7 @@ description: Pre-review Chinese fund and FOF reports for compliance and disclosu
 
 同一问题存在多个风险时，采用最高等级，并在说明中列出其他影响。不要通过问题数量简单计算总体结论。
 
-### 5. 提出修改和核验建议
+### 6. 提出修改和核验建议
 
 - 优先删除无法证明或没有必要保留的绝对化表达。
 - 在保留原意和事实边界的前提下提供可直接替换的改写。
@@ -73,7 +92,7 @@ description: Pre-review Chinese fund and FOF reports for compliance and disclosu
 - 不把确定性承诺机械改成“可能”后视为已经解决；同时检查事实依据、上下文和整体印象。
 - 不代替用户虚构风险提示、统计方法或法规依据。
 
-### 6. 输出专业预审报告
+### 7. 输出专业预审报告
 
 严格按照 [专业报告模板](references/report-template.md) 组织结果，并遵守：
 
@@ -81,6 +100,7 @@ description: Pre-review Chinese fund and FOF reports for compliance and disclosu
 - 风险明细至少包含位置、原文或事项、风险类别、等级、判断说明、所需证据、处理建议和推荐改写。
 - 对高风险问题增加独立的问题卡片，便于业务、合规和管理层快速阅读。
 - 对 FOF 报告增加独立的“FOF 专项预审”章节；不适用时省略，不输出空表。
+- 增加“数据核验范围”说明，列出运行模式、已调用来源、核验覆盖率、未命中项和数据冲突。
 - 将确定事实、分析判断和待核验事项分开呈现。
 - 使用简洁标题、短段落、统一表格和有限的状态符号；不要堆叠装饰性图标。
 - 结尾必须说明预审边界，并列出发布前仍需人工确认的事项。
@@ -91,3 +111,4 @@ description: Pre-review Chinese fund and FOF reports for compliance and disclosu
 - 缺少关键背景或原始材料时，不给出无条件“通过”。
 - 需要核验实时法规时，只使用最新、适用且可追溯的官方来源；说明检索日期和适用范围。
 - 需要核验净值或业绩数据但无法访问可信数据源时，保留原值并明确标记“未核验”，不要猜测或补算。
+- 火富牛 MCP 调用失败时仅将相关数据项降级为待核验，不中止报告预审，也不要求非火富牛用户必须安装或登录。

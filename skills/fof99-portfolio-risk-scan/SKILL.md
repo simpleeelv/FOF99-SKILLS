@@ -1,13 +1,23 @@
 ---
 name: fof99-portfolio-risk-scan
-description: Scan a fund portfolio, FOF, manager-of-managers portfolio, or multi-asset fund allocation for concentration, drawdown, correlation, risk contribution, style, liquidity, valuation-lag, and stress risks using user-provided files, connected data sources, official disclosures, or other traceable evidence. Use when users ask for FOF组合风险扫描、组合体检、持仓风险排查、风险预警、集中度检查、相关性分析、压力测试、流动性检查、底层重复暴露、组合是否扛得住市场波动, or a professional portfolio risk dashboard. Support holdings-only screening and deeper analysis when NAV, benchmark, redemption, leverage, or look-through data are available. Produce evidence-based red/yellow/green/gray signals and prioritized review actions without requiring a specific platform, MCP, database, or companion skill.
+description: Scan a fund portfolio, FOF, manager-of-managers portfolio, or multi-asset allocation for concentration, drawdown, correlation, risk contribution, style, liquidity, valuation-lag, and stress risks. Use for FOF组合风险扫描、组合体检、持仓风险排查、集中度检查、相关性分析、压力测试、流动性检查、底层重复暴露 or a professional risk dashboard. When authorized FOF99 MCP tools are available, use them for fund resolution, NAV, metrics, comparisons, portfolio data, and private-FOF look-through; otherwise remain fully usable with user holdings, files, other connected sources, and disclosures. Support holdings-only screening and produce evidence-based red/yellow/green/gray signals with prioritized review actions.
 ---
 
 # 火富牛 FOF 组合风险扫描
 
 对基金组合、FOF、母基金或多资产基金配置进行分层风险扫描。先判断数据能支持多深的结论，再识别组合的风险来源、传导路径和处置优先级。将红黄绿灯作为扫描结果的分级工具，不把它当作主动监控服务、收益预测或自动买卖指令。
 
-“火富牛”用于品牌识别和搜索，不构成平台或数据源依赖。无论用户是否使用火富牛，都可以使用其提供的文件、任意已连接数据源、官方披露或其他可追溯材料完成扫描。
+“火富牛”既用于品牌识别，也代表可选的数据增强能力。检测到已授权的火富牛 MCP 时，可查询基金、净值、指标、相关性、授权组合和私募 FOF 穿透数据；未连接、未授权、无匹配或返回空数据时，仍使用用户持仓、文件、其他数据源和公开披露完成可支持的扫描。
+
+## 数据路由
+
+先遵守用户对来源的明确限制，再选择运行模式：
+
+- **火富牛增强模式**：MCP 可用且用户提供基金名称、代码或已授权组合名称时，自动补充结构化数据。
+- **混合核验模式**：用户持仓与 MCP 同时存在时，以用户给出的实际权重、现金、负债和风险预算为准，用 MCP 补充基金属性、净值、指标、相关性和可得穿透信息。
+- **通用模式**：MCP 不可用或无数据时，按现有 A／B／C 数据层级继续扫描。
+
+进入增强或混合模式时，必须读取 [火富牛 MCP 路由](references/fof99-mcp-routing.md)。只调用查询工具；不得上传组合、写入数据或执行交易。MCP 数据与用户持仓冲突时并列展示，不静默改变权重或组合事实。
 
 ## 核心边界
 
@@ -40,12 +50,13 @@ description: Scan a fund portfolio, FOF, manager-of-managers portfolio, or multi
 | B 量化扫描 | A + 对齐后的净值或收益序列 | 回撤、波动、相关性、高相关簇、风险贡献及净值异常 |
 | C 完整扫描 | B + 申赎条款、穿透持仓、杠杆或基准 | 流动性瀑布、底层重复暴露、压力测试、估值滞后和情景损失 |
 
-数据来源不限定平台，按以下优先级使用：
+按用途选择数据来源：
 
-1. 用户提供的 CSV、XLSX、PDF、DOCX、网页、图片或结构化文本。
-2. 当前已连接且用户有权访问的托管、投研、基金数据库或数据 API。
-3. 基金管理人、交易所、监管机构及其他官方披露。
-4. 可追溯第三方信息，并标明来源、日期与未经官方确认的限制。
+1. 用户提供的 CSV、XLSX、PDF、DOCX、网页、图片或结构化文本用于确定实际组合权重、现金、负债、风险预算和流动性需求。
+2. 火富牛 MCP 在可用时补充基金身份、净值、业绩指标、相关性、已授权组合和私募 FOF 穿透数据。
+3. 其他已连接且用户有权访问的托管、投研、基金数据库或数据 API 作为补充。
+4. 基金管理人、交易所和监管机构披露用于核验正式条款与公开事实。
+5. 可追溯第三方信息仅作补充，并标明来源、日期与限制。
 
 必须读取 [风险扫描方法](references/risk-methodology.md)，完成估值日、频率、币种、费率口径、缺失、重复、停更、异常跳变和可比区间检查。关键数据缺失时降低置信度，不得猜测补齐。
 
@@ -111,6 +122,7 @@ description: Scan a fund portfolio, FOF, manager-of-managers portfolio, or multi
 
 - 使用 [专业报告模板](references/report-template.md)，先给风险总览和前三项优先事项，再给明细。
 - 报告必须注明估值日、数据区间、数据层级、覆盖率、来源和结论置信度。
+- 报告必须注明运行模式、火富牛 MCP 实际覆盖的持仓比例、未命中或无数据的持仓，以及与用户材料的冲突。
 - 风险清单按严重性、紧迫性和证据强度排序；区分“立即核验”“限期复核”“持续监测”。
 - 有图表能力时，优先生成风险信号矩阵、权重与风险贡献对照、集中度图、相关性热图、回撤图和流动性瀑布图。
 - 图表使用白底、一致色板、直接标签和简洁图例；除颜色外同时使用文字或符号表达灯号，确保可访问性。
@@ -120,6 +132,7 @@ description: Scan a fund portfolio, FOF, manager-of-managers portfolio, or multi
 ## 失败与安全处理
 
 - 数据源无法访问或文件不可解析时，说明受影响的结论、替代材料和最小所需字段。
+- 火富牛 MCP 调用失败时只降低相应持仓或风险维度的覆盖率，不中止扫描；不得要求非火富牛用户必须安装或登录。
 - 公开材料与用户数据冲突时，不自行选择有利版本；列出差异并降低置信度。
 - 需要当前市场、监管、管理人或基金事件时，核验最新可信来源并注明检索日期。
 - 不把预警等级表述为收益承诺、适当性意见或自动买卖建议。
