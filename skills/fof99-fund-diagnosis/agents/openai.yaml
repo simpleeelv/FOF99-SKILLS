@@ -1,0 +1,4 @@
+interface:
+  display_name: "火富牛基金深度诊断助手"
+  short_description: "用可追溯数据诊断基金及FOF的收益、回撤、风格与适用条件"
+  default_prompt: "使用 $fof99-fund-diagnosis 对这只基金进行深度诊断，并输出回撤优先、证据可追溯的专业报告。"

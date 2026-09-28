@@ -2,14 +2,17 @@
 
 这个仓库存放好投科技火富牛相关的技能（Skill）。每个 Skill 都是一个独立文件夹，其中的 `SKILL.md` 会告诉 AI 在特定场景下如何工作。
 
+新发布的通用型 Skill 采用统一命名：中文展示名包含“火富牛”，英文 slug 使用 `fof99-` 前缀。品牌名称用于搜索和识别，不代表必须使用火富牛平台或 MCP。
+
 ---
 
 ## 包含哪些 Skill
 
-| Skill 名称 | 主要用途 | 适用说明 |
+| Skill 名称 | 主要用途 | 依赖说明 |
 |---|---|---|
 | [`Fund-Analysis`](skills/Fund-Analysis) | 火富牛综合基金分析技能，覆盖公募与私募基金的净值走势、业绩指标、持仓穿透、策略筛选及 FOF 组合分析。 | 需搭配火富牛 MCP 配置使用 |
-| [`fund-report-compliance`](skills/fund-report-compliance) | 基金报告合规预审助手，检查基金及 FOF 报告中的表述、数据口径、业绩展示、风险披露与专项问题，并输出专业预审报告及修改建议。 | 适用于投研、尽调、业绩、归因、客户及路演材料的发布前预审 |
+| [`fof99-fund-report-compliance`](skills/fof99-fund-report-compliance) | 火富牛基金报告合规预审助手，检查基金及 FOF 报告中的表述、数据口径、业绩展示、风险披露与专项问题。 | 独立通用，可使用用户材料或任意可用数据源 |
+| [`fof99-fund-diagnosis`](skills/fof99-fund-diagnosis) | 火富牛基金深度诊断助手，围绕收益、回撤、修复、风格、管理人与 FOF 穿透生成专业诊断报告。 | 独立通用，不要求特定平台、MCP 或数据库 |
 
 ---
 
@@ -17,25 +20,28 @@
 
 ### 方式一：命令行安装（推荐）
 
-安装 [Node.js](https://nodejs.org) 后，在终端运行：
+安装 [Node.js](https://nodejs.org) 后，在终端运行所需 Skill：
 
 ```bash
 # 火富牛综合基金分析
 npx skills add simpleeelv/FOF99-SKILLS/Fund-Analysis
 
-# 基金报告合规预审
-npx skills add simpleeelv/FOF99-SKILLS/fund-report-compliance
+# 火富牛基金报告合规预审
+npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-report-compliance
+
+# 火富牛基金深度诊断
+npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-diagnosis
 ```
 
-安装到全局时增加 `-g` 参数：
+安装到全局时增加 `-g` 参数，例如：
 
 ```bash
-npx skills add simpleeelv/FOF99-SKILLS/fund-report-compliance -g
+npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-diagnosis -g
 ```
 
 ### 方式二：让 AI 自动安装
 
-> 帮我安装 GitHub 上的 Skill：`simpleeelv/FOF99-SKILLS/fund-report-compliance`
+> 帮我安装 GitHub 上的 Skill：`simpleeelv/FOF99-SKILLS/fof99-fund-diagnosis`
 
 ### 方式三：手动导入
 
@@ -51,12 +57,20 @@ FOF99-SKILLS/
 ├── skills/
 │   ├── Fund-Analysis/
 │   │   └── SKILL.md
-│   └── fund-report-compliance/
+│   ├── fof99-fund-report-compliance/
+│   │   ├── SKILL.md
+│   │   ├── agents/
+│   │   │   └── openai.yaml
+│   │   └── references/
+│   │       ├── fof-review-checklist.md
+│   │       └── report-template.md
+│   └── fof99-fund-diagnosis/
 │       ├── SKILL.md
 │       ├── agents/
 │       │   └── openai.yaml
 │       └── references/
-│           ├── fof-review-checklist.md
+│           ├── diagnosis-methodology.md
+│           ├── fof-diagnosis.md
 │           └── report-template.md
 └── mcp/
     ├── README.md

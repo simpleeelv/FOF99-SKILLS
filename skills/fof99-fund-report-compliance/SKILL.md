@@ -1,11 +1,13 @@
 ---
-name: fund-report-compliance
+name: fof99-fund-report-compliance
 description: Pre-review Chinese fund and FOF reports for compliance and disclosure risks, then produce professional findings and revision suggestions. Use when reviewing investment reports, due-diligence reports, performance reports, attribution reports, client reports, roadshow materials, fundraising materials, sales talking points, or public content involving funds or fund-of-funds. Check return promises, exaggerated or absolute claims, selective performance presentation, unsupported data, misleading benchmarks or rankings, missing sources and dates, inadequate risk disclosure, investor-suitability language, and FOF-specific issues such as look-through exposure, layered fees, liquidity mismatch, concentration, valuation lag, and underlying-fund performance attribution. Trigger on requests such as 基金报告合规预审、报告合规检查、FOF报告审查、基金材料风险检查、业绩报告审查 or 合规化改写.
 ---
 
-# 基金报告合规预审
+# 火富牛基金报告合规预审
 
 将基金及 FOF 报告视为“表述、数据、口径、披露”四类风险的组合。完成发布前预审，给出可追溯的问题定位、风险分级、核验清单和修改建议，不代替合规、法务或监管机构的最终判断。
+
+“火富牛”用于品牌识别和搜索，不构成平台依赖。无论用户是否使用火富牛，都使用其提供的材料、任意已连接数据源和可追溯官方来源完成预审。
 
 ## 工作原则
 
