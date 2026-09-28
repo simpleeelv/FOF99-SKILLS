@@ -2,7 +2,7 @@
 
 这个仓库存放好投科技火富牛相关的技能（Skill）。每个 Skill 都是一个独立文件夹，其中的 `SKILL.md` 会告诉 AI 在特定场景下如何工作。
 
-新发布的通用型 Skill 采用统一命名：中文展示名包含“火富牛”，英文 slug 使用 `fof99-` 前缀。品牌名称用于搜索和识别，不代表必须使用火富牛平台或 MCP。
+新发布的通用型 Skill 采用统一命名：中文名称包含“火富牛”，英文 slug 使用 `fof99-` 前缀。品牌名称用于搜索和识别，不代表必须使用火富牛平台或 MCP。
 
 ---
 
@@ -45,7 +45,7 @@ npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-diagnosis -g
 
 ### 方式三：手动导入
 
-下载相应 Skill 文件夹，并导入其中的 `SKILL.md`、`agents/` 和 `references/`。
+下载相应 Skill 文件夹，并导入其中的 `SKILL.md` 和 `references/`。
 
 ---
 
@@ -59,15 +59,11 @@ FOF99-SKILLS/
 │   │   └── SKILL.md
 │   ├── fof99-fund-report-compliance/
 │   │   ├── SKILL.md
-│   │   ├── agents/
-│   │   │   └── openai.yaml
 │   │   └── references/
 │   │       ├── fof-review-checklist.md
 │   │       └── report-template.md
 │   └── fof99-fund-diagnosis/
 │       ├── SKILL.md
-│       ├── agents/
-│       │   └── openai.yaml
 │       └── references/
 │           ├── diagnosis-methodology.md
 │           ├── fof-diagnosis.md

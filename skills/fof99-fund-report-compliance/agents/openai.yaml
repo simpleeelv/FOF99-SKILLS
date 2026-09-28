@@ -1,4 +1,0 @@
-interface:
-  display_name: "火富牛基金报告合规预审助手"
-  short_description: "预审基金及FOF报告中的表述、数据、业绩展示与风险披露"
-  default_prompt: "使用 $fof99-fund-report-compliance 预审这份基金或 FOF 报告，并按专业模板输出风险分级、核验事项和修改建议。"
