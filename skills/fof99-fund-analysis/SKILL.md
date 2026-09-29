@@ -3,7 +3,7 @@ name: fof99-fund-analysis
 description: Analyze, compare, screen, and report on public funds, private funds, self-built funds, direct portfolios, FOFs, and fund managers using validated NAV, performance, benchmark, holdings, strategy, scale, and portfolio evidence. Use for 基金分析、净值走势、业绩指标、基金对比、持仓分析、基金筛选、管理人分析、FOF穿透、组合归因 or 综合基金分析报告. When authorized FOF99 MCP query tools are available, use them to resolve products and enrich or cross-check structured data; otherwise work independently from user files, other connected sources, official disclosures, and traceable public information. Preserve source provenance, comparability, data limits, and research boundaries.
 ---
 
-# 火富牛综合基金分析
+# 火富牛-基金全景投研分析
 
 > 版本：1.0.3
 
