@@ -3,7 +3,7 @@ name: fof99-fund-data-query
 description: Query, validate, normalize, and package data for public funds, private funds, FOFs, portfolios, fund managers, benchmarks, and relevant market indicators. Use for 基金数据查询、净值获取、业绩指标提取、基金代码识别、持仓穿透数据、管理人资料、基金数据核验、多基金数据对齐、数据来源证明 or a reusable fund data package. When authorized FOF99 MCP query tools are available, use them for structured retrieval and cross-checking; otherwise work independently with user files, other connected sources, official disclosures, and traceable public information. Return source-aware data receipts, coverage, conflicts, and unavailable fields without inventing values.
 ---
 
-# 火富牛-基金数据查询与核验
+# 火富牛-基金数据查询
 
 > 版本：1.0.3
 
