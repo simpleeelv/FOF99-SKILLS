@@ -12,13 +12,14 @@
 |---|---:|---|---|
 | [`fof99-fund-analysis`](skills/fof99-fund-analysis) | 1.0.3 | 火富牛-基金全景投研分析，覆盖基金发现、净值、业绩指标、持仓、筛选、比较及 FOF 组合分析。 | 独立通用；连接火富牛 MCP 后可自动补充、比较与核验数据 |
 | [`fof99-fund-data-query`](skills/fof99-fund-data-query) | 1.0.3 | 火富牛-基金数据查询与核验，查询、校验、标准化并交付基金、管理人、持仓、组合和市场数据。 | 独立通用；连接火富牛 MCP 后可使用结构化查询与交叉核验 |
+| [`fof99-fund-manager-due-diligence`](skills/fof99-fund-manager-due-diligence) | 1.0.0 | 火富牛-私募基金管理人尽调，核验身份、股权、团队、策略、产品、业绩、合规诚信与舆情，并生成正式 HTML 与内部底稿。 | 独立通用且 HTML 生成器无第三方依赖；连接火富牛 MCP 后补充结构化尽调数据 |
 | [`fof99-fund-report-compliance`](skills/fof99-fund-report-compliance) | 1.0.3 | 火富牛基金报告合规预审助手，检查基金及 FOF 报告中的表述、数据口径、业绩展示、风险披露与专项问题。 | 独立通用；连接火富牛 MCP 后可核验基金数据 |
 | [`fof99-fund-diagnosis`](skills/fof99-fund-diagnosis) | 1.0.3 | 火富牛基金深度诊断助手，围绕收益、回撤、修复、风格、管理人与 FOF 穿透生成专业诊断报告。 | 独立通用；连接火富牛 MCP 后可自动补充与核验数据 |
 | [`fof99-portfolio-risk-scan`](skills/fof99-portfolio-risk-scan) | 1.0.3 | 火富牛 FOF 组合风险扫描助手，分层检查集中度、回撤、相关性、风险贡献、流动性、压力情景与底层重复暴露。 | 独立通用；仅有持仓可结构扫描，连接火富牛 MCP 后补充量化数据 |
 
 ## 双模式数据能力
 
-五个 `fof99-` 技能都会根据当前可用数据自动选择运行方式：
+六个 `fof99-` 技能都会根据当前可用数据自动选择运行方式：
 
 - **火富牛增强模式**：优先调用已授权的只读 MCP 工具，补充基金识别、净值、因子、相关性或私募 FOF 穿透数据。
 - **混合核验模式**：以用户材料为主，用 MCP 数据做交叉核验；冲突数据会并列展示，不静默覆盖。
@@ -28,15 +29,16 @@
 
 ## 品牌视觉系统
 
-1.0.3 版本为五个通用型 Skill 配置独立的火富牛视觉规范，并根据任务场景分别优化：
+仓库为六个通用型 Skill 配置独立的火富牛视觉规范，并根据任务场景分别优化：
 
 - **基金全景投研分析**：基金发现、KPI、净值与指标比较、筛选结果、持仓与组合分析。
 - **基金数据查询与核验**：查询状态、对象与字段覆盖率、数据新鲜度、来源冲突和补数清单。
+- **私募基金管理人尽调**：身份与股权、团队、策略、产品全景、代表业绩、重大风险和证据边界。
 - **基金深度诊断**：研究结论、KPI、净值与回撤图、证据表和适用条件。
 - **基金报告合规预审**：风险计数、问题定位、原文与改写分离、发布前条件。
 - **FOF 组合风险扫描**：红黄绿灰灯号、数据覆盖率、风险矩阵、优先事项和复核计划。
 
-视觉规范支持 ECharts 及其他可用图表能力；纯 Markdown 会自动采用结构化表格和状态标记，不依赖特定渲染工具。
+各 Skill 按实际能力使用 ECharts、内联 SVG 或结构化表格；纯 Markdown 会自动采用信息层级和状态标记，不依赖特定渲染工具。
 
 ---
 
@@ -52,6 +54,9 @@ npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-analysis
 
 # 火富牛-基金数据查询与核验
 npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-data-query
+
+# 火富牛-私募基金管理人尽调
+npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-manager-due-diligence
 
 # 火富牛基金报告合规预审
 npx skills add simpleeelv/FOF99-SKILLS/fof99-fund-report-compliance
@@ -103,6 +108,15 @@ FOF99-SKILLS/
 │   │       ├── fof99-visual-style.md
 │   │       ├── output-template.md
 │   │       └── query-workflows.md
+│   ├── fof99-fund-manager-due-diligence/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   │   ├── due-diligence-framework.md
+│   │   │   ├── fof99-mcp-routing.md
+│   │   │   ├── fof99-visual-style.md
+│   │   │   └── report-data-contract.md
+│   │   └── scripts/
+│   │       └── generate_due_diligence_html.py
 │   ├── fof99-fund-report-compliance/
 │   │   ├── SKILL.md
 │   │   └── references/
