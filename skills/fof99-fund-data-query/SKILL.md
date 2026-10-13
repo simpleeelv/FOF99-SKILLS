@@ -1,6 +1,20 @@
 ---
 name: fof99-fund-data-query
-description: Query, validate, normalize, and package data for public funds, private funds, FOFs, portfolios, fund managers, benchmarks, and relevant market indicators. Use for 基金数据查询、净值获取、业绩指标提取、基金代码识别、持仓穿透数据、管理人资料、基金数据核验、多基金数据对齐、数据来源证明 or a reusable fund data package. When authorized FOF99 MCP query tools are available, use them for structured retrieval and cross-checking; otherwise work independently with user files, other connected sources, official disclosures, and traceable public information. Return source-aware data receipts, coverage, conflicts, and unavailable fields without inventing values.
+description: >
+  查询、核验、标准化并打包公募基金、私募基金、FOF、组合、基金管理人、基准及相关市场指标数据。
+  适用于基金数据查询、净值获取、业绩指标提取、基金代码识别、持仓穿透数据、管理人资料、基金数据核验、
+  多基金数据对齐、数据来源证明或生成可复用的基金数据包。若可使用已授权的 FOF99 MCP 查询工具，
+  则用其进行结构化检索和交叉核验；否则独立使用用户文件、其他已连接来源、官方披露及可追溯公开信息。
+  返回包含来源、覆盖范围、冲突项和不可用字段的数据回执，不得虚构数值。
+
+  Query, validate, normalize, and package data for public funds, private funds, FOFs, portfolios,
+  fund managers, benchmarks, and relevant market indicators. Use for fund data queries, NAV retrieval,
+  performance metric extraction, fund code identification, holdings look-through data, manager profiles,
+  fund data validation, multi-fund data alignment, source verification, or reusable fund data packages.
+  When authorized FOF99 MCP query tools are available, use them for structured retrieval and
+  cross-checking; otherwise work independently with user files, other connected sources, official
+  disclosures, and traceable public information. Return source-aware data receipts, coverage,
+  conflicts, and unavailable fields without inventing values.
 ---
 
 # 火富牛-基金数据查询
