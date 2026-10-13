@@ -1,6 +1,21 @@
 ---
 name: fof99-fund-analysis
-description: Analyze, compare, screen, and report on public funds, private funds, self-built funds, direct portfolios, FOFs, and fund managers using validated NAV, performance, benchmark, holdings, strategy, scale, and portfolio evidence. Use for 基金分析、净值走势、业绩指标、基金对比、持仓分析、基金筛选、管理人分析、FOF穿透、组合归因 or 综合基金分析报告. When authorized FOF99 MCP query tools are available, use them to resolve products and enrich or cross-check structured data; otherwise work independently from user files, other connected sources, official disclosures, and traceable public information. Preserve source provenance, comparability, data limits, and research boundaries.
+description: >
+  分析、比较、筛选并报告公募基金、私募基金、自建基金、直投组合、FOF 和基金管理人，
+  使用经核验的净值、业绩、基准、持仓、策略、规模及组合证据。适用于基金分析、净值走势、
+  业绩指标、基金对比、持仓分析、基金筛选、管理人分析、FOF 穿透、组合归因或综合基金分析报告。
+  若可使用已授权的 FOF99 MCP 查询工具，则用其识别产品并补充或交叉核验结构化数据；否则独立使用
+  用户文件、其他已连接来源、官方披露及可追溯公开信息。保留数据来源、可比性、数据限制和研究边界。
+
+  Analyze, compare, screen, and report on public funds, private funds, self-built funds,
+  direct portfolios, FOFs, and fund managers using validated NAV, performance, benchmark,
+  holdings, strategy, scale, and portfolio evidence. Use for fund analysis, NAV trends,
+  performance metrics, fund comparisons, holdings analysis, fund screening, manager analysis,
+  FOF look-through, portfolio attribution, or comprehensive fund analysis reports. When authorized
+  FOF99 MCP query tools are available, use them to resolve products and enrich or cross-check
+  structured data; otherwise work independently from user files, other connected sources, official
+  disclosures, and traceable public information. Preserve source provenance, comparability, data
+  limits, and research boundaries.
 ---
 
 # 火富牛-基金全景投研分析
