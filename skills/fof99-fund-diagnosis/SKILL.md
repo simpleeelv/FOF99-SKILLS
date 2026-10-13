@@ -1,6 +1,20 @@
 ---
 name: fof99-fund-diagnosis
-description: Diagnose one public fund, private fund, FOF, portfolio fund, or underlying fund using validated NAV, performance, drawdown, benchmark, style, holdings, manager, and risk evidence. Use for 单只基金深度诊断、基金体检、净值拆解、收益来源、回撤分析、持有复盘、FOF穿透诊断 or a professional fund diagnosis report. When authorized FOF99 MCP tools are available, use them to resolve funds and enrich or cross-check structured data; otherwise work independently from user files, other connected sources, and traceable disclosures. Emphasize drawdown recovery, comparable periods, FOF look-through risks, evidence limits, and conditional research conclusions rather than unsupported investment advice.
+description: >
+  使用经核验的净值、业绩、回撤、基准、风格、持仓、管理人和风险证据，诊断单只公募基金、私募基金、
+  FOF、组合基金或底层基金。适用于单只基金深度诊断、基金体检、净值拆解、收益来源分析、回撤分析、
+  持有复盘、FOF 穿透诊断或专业基金诊断报告。若可使用已授权的 FOF99 MCP 工具，则用其识别基金并
+  补充或交叉核验结构化数据；否则独立使用用户文件、其他已连接来源及可追溯披露信息。重点关注回撤修复、
+  可比区间、FOF 穿透风险、证据边界及有条件的研究结论，不提供缺乏依据的投资建议。
+
+  Diagnose one public fund, private fund, FOF, portfolio fund, or underlying fund using validated
+  NAV, performance, drawdown, benchmark, style, holdings, manager, and risk evidence. Use for
+  in-depth single-fund diagnosis, fund health checks, NAV decomposition, return-source analysis,
+  drawdown analysis, holding reviews, FOF look-through diagnosis, or professional fund diagnosis
+  reports. When authorized FOF99 MCP tools are available, use them to resolve funds and enrich or
+  cross-check structured data; otherwise work independently from user files, other connected sources,
+  and traceable disclosures. Emphasize drawdown recovery, comparable periods, FOF look-through risks,
+  evidence limits, and conditional research conclusions rather than unsupported investment advice.
 ---
 
 # 火富牛基金深度诊断
