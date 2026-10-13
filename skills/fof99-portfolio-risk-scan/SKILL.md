@@ -1,6 +1,20 @@
 ---
 name: fof99-portfolio-risk-scan
-description: Scan a fund portfolio, FOF, manager-of-managers portfolio, or multi-asset allocation for concentration, drawdown, correlation, risk contribution, style, liquidity, valuation-lag, and stress risks. Use for FOF组合风险扫描、组合体检、持仓风险排查、集中度检查、相关性分析、压力测试、流动性检查、底层重复暴露 or a professional risk dashboard. When authorized FOF99 MCP tools are available, use them for fund resolution, NAV, metrics, comparisons, portfolio data, and private-FOF look-through; otherwise remain fully usable with user holdings, files, other connected sources, and disclosures. Support holdings-only screening and produce evidence-based red/yellow/green/gray signals with prioritized review actions.
+description: >
+  扫描基金组合、FOF、多管理人组合或多资产配置中的集中度、回撤、相关性、风险贡献、风格、流动性、
+  估值滞后和压力风险。适用于 FOF 组合风险扫描、组合体检、持仓风险排查、集中度检查、相关性分析、
+  压力测试、流动性检查、底层重复暴露或风险仪表盘。若可使用已授权的 FOF99 MCP 工具，则用其查询基金、
+  净值、指标、组合数据和私募 FOF 穿透；否则使用用户持仓、文件、其他已连接来源及披露信息。
+  支持仅基于持仓的筛查，并生成有证据支撑的红、黄、绿、灰信号和优先复核行动。
+
+  Scan a fund portfolio, FOF, manager-of-managers portfolio, or multi-asset allocation for
+  concentration, drawdown, correlation, risk contribution, style, liquidity, valuation-lag, and
+  stress risks. Use for FOF portfolio risk scans, portfolio health checks, holdings risk reviews,
+  concentration and correlation analysis, stress testing, liquidity checks, duplicate exposures, or
+  risk dashboards. When authorized FOF99 MCP tools are available, use them for fund resolution, NAV,
+  metrics, portfolio data, and private-FOF look-through; otherwise use holdings, files, connected sources,
+  and disclosures. Support holdings-only screening and produce evidence-based red/yellow/green/gray
+  signals with prioritized review actions.
 ---
 
 # 火富牛 FOF 组合风险扫描
