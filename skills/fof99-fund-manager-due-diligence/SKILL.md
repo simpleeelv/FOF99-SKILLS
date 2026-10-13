@@ -1,6 +1,19 @@
 ---
 name: fof99-fund-manager-due-diligence
-description: Research and assess Chinese private fund managers and produce a self-contained, source-backed Chinese HTML due-diligence report with a separate internal workpaper. Use for 私募基金管理人尽调、管理人初筛、准入尽调、年度复核、策略尽调、核心团队与股权核验、产品全景与代表产品业绩、合规诚信与舆情核查、尽调访谈问题 or a polished manager due-diligence report. When authorized FOF99 MCP tools are available, use them for structured manager, product, NAV, performance, integrity, and risk data; otherwise work independently with user materials, official disclosures, other connected sources, and traceable public information. Preserve evidence provenance, distinguish manager statements from verified facts, and never invent unavailable private data.
+description: >
+  调研和评估中国私募基金管理人，生成有来源支撑的中文 HTML 尽调报告及独立内部底稿。
+  适用于管理人初筛、准入或年度复核、策略尽调、团队与股权核验、产品与业绩分析、合规诚信与舆情核查、
+  访谈准备或专业尽调报告。若可使用已授权的 FOF99 MCP 工具，则用其查询结构化的管理人、产品、净值、
+  业绩、诚信和风险数据；否则使用用户材料、官方披露、其他已连接来源及可追溯公开信息。
+  保留证据来源，区分管理人陈述与已核验事实，不得虚构私有数据。
+
+  Research and assess Chinese private fund managers and produce a source-backed Chinese HTML report
+  with a separate internal workpaper. Use for manager screening, admission or annual reviews, strategy
+  diligence, team and ownership verification, product and performance analysis, integrity checks,
+  interview preparation, or manager due-diligence reports. When authorized FOF99 MCP tools are available,
+  use them for structured manager, product, NAV, performance, integrity, and risk data; otherwise rely on
+  user materials, official disclosures, connected sources, and traceable public information. Preserve
+  provenance, distinguish manager statements from verified facts, and never invent private data.
 ---
 
 # 火富牛-私募基金管理人尽调
