@@ -1,6 +1,18 @@
 ---
 name: fof99-fund-report-compliance
-description: Pre-review Chinese fund and FOF reports for compliance, data, disclosure, and presentation risks, then produce traceable findings and revision suggestions. Use for 基金报告合规预审、报告合规检查、FOF报告审查、业绩报告审查、基金材料风险检查 or 合规化改写 across investment, due-diligence, attribution, client, roadshow, fundraising, sales, and public materials. Check promises, absolute claims, selective performance, unsupported figures, misleading benchmarks or rankings, missing sources, suitability language, risk disclosure, and FOF-specific look-through issues. When authorized FOF99 MCP tools are available, use them only to cross-check fund facts and data claims; otherwise complete the review from user materials and traceable official sources.
+description: >
+  对中文基金及 FOF 报告进行合规、数据、披露和呈现风险预审，并输出可追溯的问题及修改建议。
+  适用于投研、尽调、归因、客户、路演、募资、销售及公开材料的合规检查或改写。检查承诺和绝对化表述、
+  选择性业绩、无依据数据、误导性基准或排名、来源缺失、适当性语言、风险披露及 FOF 穿透问题。
+  若可使用已授权的 FOF99 MCP 工具，仅用其交叉核验基金事实和数据声明；否则根据用户材料及可追溯官方来源审查。
+
+  Pre-review Chinese fund and FOF reports for compliance, data, disclosure, and presentation risks,
+  then provide traceable findings and revisions. Use for compliance checks or rewriting across investment,
+  due-diligence, attribution, client, roadshow, fundraising, sales, and public materials. Check promises,
+  absolute claims, selective performance, unsupported figures, misleading benchmarks or rankings,
+  missing sources, suitability language, risk disclosure, and FOF look-through issues. When authorized
+  FOF99 MCP tools are available, use them only to cross-check fund facts and data claims; otherwise review
+  user materials against traceable official sources.
 ---
 
 # 火富牛基金报告合规预审
