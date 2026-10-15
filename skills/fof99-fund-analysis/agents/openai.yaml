@@ -1,0 +1,6 @@
+interface:
+  display_name: "火富牛基金全景投研分析"
+  short_description: "分析、比较和筛选基金、管理人与FOF组合，输出可核验的专业投研结论。"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  default_prompt: "使用 $fof99-fund-analysis 分析我提供的基金资料，并说明数据来源、关键结论和风险边界。"

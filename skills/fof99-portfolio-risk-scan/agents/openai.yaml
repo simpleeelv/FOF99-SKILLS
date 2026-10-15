@@ -1,0 +1,6 @@
+interface:
+  display_name: "火富牛FOF组合风险扫描"
+  short_description: "扫描基金组合和FOF的集中度、回撤、相关性、流动性及压力风险。"
+  icon_small: "./assets/icon.png"
+  icon_large: "./assets/icon.png"
+  default_prompt: "使用 $fof99-portfolio-risk-scan 扫描这个基金组合的主要风险并给出优先复核行动。"
